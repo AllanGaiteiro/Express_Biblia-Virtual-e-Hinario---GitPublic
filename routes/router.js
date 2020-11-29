@@ -9,10 +9,14 @@ router.get('/', (req, res) => {
 
 })
 
+
 router.get('/biblia', (req, res) => {
     var livros = Biblia('livros', 'livros')
     res.render('biblia', { livros: livros })
 })
+
+
+
 
 router.post('/biblia/livro', (req, res) => {
     var cap = Biblia(req.body.name, 'Cap')
@@ -50,6 +54,11 @@ for (var i = 1; i < vers.length; i++) {
 
 })
 
+
+router.get('/hinario', (req, res) => {
+    
+    res.render('biblia', { livros: livros })
+})
 
 //// export module
 module.exports = router;
