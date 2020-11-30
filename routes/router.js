@@ -54,11 +54,24 @@ for (var i = 1; i < vers.length; i++) {
 
 })
 
-
+/*
 router.get('/hinario', (req, res) => {
     
-    res.render('biblia', { livros: livros })
+    res.render('hinario')
 })
+router.post('/search', (req, res) => {
+    //https://api.vagalume.com.br/search.artmus?q=search    
+    jQuery.getJSON(
+        `https://api.vagalume.com.br/search.artmus?q=${req.boby.search}`    ,
+        function (data) {
+            // Nome do artista
+            alert(data);
+        }
+    );
+    res.render('hinario')
+})
+
+*/
 
 //// export module
 module.exports = router;
